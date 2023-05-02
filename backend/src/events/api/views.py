@@ -1,6 +1,6 @@
 from rest_framework import viewsets,generics
-from ..models import ClienteUser, Productos
-from .serializer import ClienteSerializer, ProductoSerializer
+from ..models import ClienteUser, Productos, Usuarios
+from .serializer import ClienteSerializer, ProductoSerializer, UsuarioSerializer
 from django.contrib.auth.hashers import check_password
 from rest_framework.response import Response
 from rest_framework import status
@@ -33,3 +33,6 @@ class UserView(generics.GenericAPIView):
 class ProductoView(viewsets.ModelViewSet):
     serializer_class = ProductoSerializer
     queryset = Productos.objects.all()
+class UsuarioView(viewsets.ModelViewSet):
+    serializer_class = UsuarioSerializer
+    queryset = Usuarios.objects.all()

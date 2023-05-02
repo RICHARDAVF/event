@@ -32,9 +32,10 @@ export const Login = ({action}) => {
     const handleLogin = async () => {
        
         try{ 
-            const res = await fetch(`http://192.168.0.104:8000/api/client/login/${ruc}/${usuario}/${password}/`, {
+            const res = await fetch(`http://192.168.1.110:8000/api/client/login/${ruc}/${usuario}/${password}/`, {
                 method: 'GET',
             });
+            console.log(res)
             const data = await res.json({ruc,usuario})
             if (data.usuario===undefined){
                 Alert.alert(

@@ -4,8 +4,10 @@ import { navOptions } from "./options";
 import { useNavigation } from "@react-navigation/native";
 import { ProfileDetail } from "../screen/profiles/profile-detail";
 import { ProfileScreen } from "../screen/profiles/profiles-screen";
+import { HomeTabs, ProducTabs } from "./tabs";
+
+import { Cliente } from "../screen/ventas/list-client";
 import { ListaProducto } from "../screen/ventas/nota-ventas";
-import { HomeTabs } from "./tabs";
 
 const Stack = createStackNavigator();
 
@@ -22,8 +24,9 @@ export const ListaStack=()=> {
 
     return (
         <Stack.Navigator screenOptions={()=>navOptions(navigation)}>
-            <Stack.Screen name="Lista" component={ListaProducto} options={{title:'Lista de productos',headerTitleAlign:'center'}}/>
+            <Stack.Screen name="Lista" component={ProducTabs} options={{title:'Lista de productos',headerTitleAlign:'center'}}/>
             <Stack.Screen name="Event" component={Detail} />
+            <Stack.Screen name="Cliente" component={Cliente} options={{title:'Lista de Clientes',headerTitleAlign:'center'}} />
         </Stack.Navigator>
     );
 }

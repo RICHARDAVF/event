@@ -3,10 +3,12 @@ import { TouchableOpacity,Text,StyleSheet,View} from "react-native";
 
 
 export const EventItem = ({id,producto,descripcion,precio,stock,descuento})=>{
+    
     const navigation = useNavigation()
+    
     return (
         // <TouchableOpacity style={styles.card} onPress={()=>{navigation.navigate('Event',{eventId:[id,title,descripcion]})}}>
-        <TouchableOpacity style={styles.card} onPress={()=>{navigation.navigate('Event',{eventId:id})}} >
+        <TouchableOpacity style={styles.card} onPress={()=>{navigation.navigate('Event',{data:[id,producto,descripcion,precio,stock,descuento]})}} >
             <View style={styles.container}>
             <View style={styles.column}>
                 <Text>ID: {id}</Text>
