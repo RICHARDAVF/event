@@ -5,7 +5,10 @@ import { TouchableOpacity } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { Contex } from "../context";
 
-export const Cliente = ()=>{
+export const EventListVenta = (data)=>{
+    const renderItem =({item})=>{
+        
+    }
     const globalContex= useContext(Contex)
     const {dominio} = globalContex;
     console.log(dominio)

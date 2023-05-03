@@ -5,9 +5,8 @@ import { useNavigation } from "@react-navigation/native";
 import { ProfileDetail } from "../screen/profiles/profile-detail";
 import { ProfileScreen } from "../screen/profiles/profiles-screen";
 import { HomeTabs, ProducTabs } from "./tabs";
-
 import { Cliente } from "../screen/ventas/list-client";
-import { ListaProducto } from "../screen/ventas/nota-ventas";
+
 
 const Stack = createStackNavigator();
 

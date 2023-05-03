@@ -2,7 +2,6 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import {Home} from '../screen/home'
 import { QrCodeScreen } from "../screen/qr-code-scren";
 import { Ionicons } from "@expo/vector-icons";
-import { ListaStack } from "./stack";
 import { ListaProducto } from "../screen/ventas/nota-ventas";
 import { Carrito } from "../screen/carrito";
 const Tab = createBottomTabNavigator();

@@ -30,8 +30,8 @@ const styles = StyleSheet.create({
         borderWidth:1,
         borderColor:'gray',
         borderRadius:10,
-        marginVertical:5,
-        padding:30,
+        padding:10,
+       
         
     },
     container: {

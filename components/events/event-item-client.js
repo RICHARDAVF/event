@@ -11,8 +11,9 @@ export const EventItemClient = ({id,nombre,apellido,ruc,razon_social,direccion})
         setClient(datos)
         navigation.navigate('Lista')
     }
+    
     return (
-        // <TouchableOpacity style={styles.card} onPress={()=>{navigation.navigate('Event',{eventId:[id,title,descripcion]})}}>
+       
         <TouchableOpacity style={styles.card} onPress={()=>selectCliente({nombre:nombre,apellido:apellido,ruc:ruc,razon_social:razon_social,direccion:direccion})} >
             <View style={styles.container}>
             <View style={styles.column}>

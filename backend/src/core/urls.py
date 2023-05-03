@@ -22,6 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('events.api.urls')),
     path('setting/', include('config.urls')),
-    # path('docs/',include_docs_urls(title="APIREST NOISYSTEM")),
+    path('docs/',include_docs_urls(title="APIREST NOISYSTEM")),
 
 ]

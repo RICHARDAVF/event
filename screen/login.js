@@ -3,12 +3,9 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
 import { Contex } from "./context";
 import AsyncStorage from '@react-native-async-storage/async-storage';
-
-
-
 export const Login = ({action}) => {
     const globalContex = useContext(Contex)
-    const {ruc,setRuc,usuario,setUsuario} = globalContex;
+    const {ruc,setRuc,usuario,setUsuario,dominio} = globalContex;
     const [password, setPassword] = useState('');
     useEffect(() => {
         checkIfLoggedIn();
@@ -32,7 +29,7 @@ export const Login = ({action}) => {
     const handleLogin = async () => {
        
         try{ 
-            const res = await fetch(`http://192.168.1.110:8000/api/client/login/${ruc}/${usuario}/${password}/`, {
+            const res = await fetch(`${dominio}:8000/api/client/login/${ruc}/${usuario}/${password}/`, {
                 method: 'GET',
             });
             console.log(res)
