@@ -6,10 +6,10 @@ import { MyDrawer } from './navigation/drawer';
 import { StatusBar } from 'expo-status-bar';
 import { Login } from './screen/login';
 import { Provider } from "./screen/context";
+import con from './screen/conexion';
 
 const App = () => {
-
-
+  con()
   const [showFirstView, setShowFirstView] = useState(true);
   const handleButtonPress = () => {
     setShowFirstView(false);

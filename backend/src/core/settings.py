@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-$-qrp=1go2_v_-ak8ysjne77zq&2^aza@5a(%ikp(izpepx8g$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.0.104','192.168.1.110']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.0.104','192.168.1.110','192.168.1.233']
 
 # Application definition
 
@@ -84,7 +85,20 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'mssql',
+#         'NAME': 'siia_arauco',
+#         'USER':'sa',
+#         'PASSWORD':'Noi2011',
+#         'HOST':'192.168.1.37',
+#         'PORT':'1433',
+#         'OPTIONS':{
+#             'driver':'SQL Server Native Client 10.0'
+#         }
+#     }
+# }
+DATABASE_CONNECTION_POOLING = False
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -129,6 +143,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ORIGIN_WHITELIST = [
      'http://192.168.0.104:8000',
      'http://192.168.1.110:8000',
+     'http://192.168.1.233:8000',
 ]
 REST_FRAMEWORK = {'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'}
 

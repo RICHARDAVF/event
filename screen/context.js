@@ -6,7 +6,7 @@ export const Provider = ({children})=>{
     const [ruc, setRuc] = useState('');
     const [usuario, setUsuario] = useState('');
     const [productos,setProductos] = useState([]);
-    const [dominio,setDominio]= useState('http://192.168.1.110')
+    const [dominio,setDominio]= useState('http://192.168.1.233')
    
 
     const globalContex = {

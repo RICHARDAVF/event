@@ -10,7 +10,6 @@ export const Carrito = ()=>{
         var t = 0;
         for (item in productos){
             t+=parseFloat(productos[item].total);
-            
         }
         return t;
       
